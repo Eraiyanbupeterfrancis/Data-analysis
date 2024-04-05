@@ -7,7 +7,7 @@ import plotly.io as pio
 pio.templates.default = "plotly_white"
 #exploring the given dataset
 data=pd.read_csv('delhiaqi.csv')
-server=cal_aqi.server
+
 a=go.Figure()
 for pollutant in ['co', 'no', 'no2', 'o3', 'so2', 'pm2_5', 'pm10', 'nh3']:
     a.add_trace(go.Scatter(x=data['date'],y=data[pollutant],mode='lines',name=pollutant))
